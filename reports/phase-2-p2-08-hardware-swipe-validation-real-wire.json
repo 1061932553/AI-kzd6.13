@@ -1,0 +1,958 @@
+{
+  "com_port": "COM4",
+  "connect": {
+    "command_id": "adapter-connect-000001",
+    "data": {
+      "resource_id": 1344
+    },
+    "device_id": "ARM-001",
+    "error": null,
+    "finished_at": "2026-06-14T17:14:34.127594+00:00",
+    "started_at": "2026-06-14T17:14:34.124301+00:00",
+    "state": "IDLE",
+    "success": true,
+    "trace_id": null
+  },
+  "device_id": "ARM-001",
+  "disconnect": {
+    "command_id": "adapter-close-003844",
+    "data": {
+      "resource_id": null
+    },
+    "device_id": "ARM-001",
+    "error": null,
+    "finished_at": "2026-06-14T17:18:05.565831+00:00",
+    "started_at": "2026-06-14T17:18:05.564961+00:00",
+    "state": "OFFLINE",
+    "success": true,
+    "trace_id": null
+  },
+  "finished_at": "2026-06-14T17:18:05.565879+00:00",
+  "hardware_authorized_by_user": true,
+  "invalidated_previous_report": "reports/phase-2-p2-08-hardware-swipe-validation.md used MOVE_XY/MOVE_Z and user observed no physical motion",
+  "mapping": {
+    "arm_bounds": [
+      0,
+      140,
+      0,
+      140
+    ],
+    "correction_grid": null,
+    "screen_roi": [
+      64,
+      32,
+      482,
+      911
+    ]
+  },
+  "results": [
+    {
+      "elapsed_ms": 1759.749,
+      "error": null,
+      "iteration": 1,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.088,
+      "error": null,
+      "iteration": 2,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.753,
+      "error": null,
+      "iteration": 3,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.673,
+      "error": null,
+      "iteration": 4,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1758.803,
+      "error": null,
+      "iteration": 5,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.936,
+      "error": null,
+      "iteration": 6,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.943,
+      "error": null,
+      "iteration": 7,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1764.432,
+      "error": null,
+      "iteration": 8,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1756.987,
+      "error": null,
+      "iteration": 9,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.644,
+      "error": null,
+      "iteration": 10,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1757.559,
+      "error": null,
+      "iteration": 11,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.949,
+      "error": null,
+      "iteration": 12,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.521,
+      "error": null,
+      "iteration": 13,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.255,
+      "error": null,
+      "iteration": 14,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.894,
+      "error": null,
+      "iteration": 15,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.239,
+      "error": null,
+      "iteration": 16,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.667,
+      "error": null,
+      "iteration": 17,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.012,
+      "error": null,
+      "iteration": 18,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.86,
+      "error": null,
+      "iteration": 19,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1758.982,
+      "error": null,
+      "iteration": 20,
+      "scenario": "up",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.294,
+      "error": null,
+      "iteration": 1,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1758.149,
+      "error": null,
+      "iteration": 2,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1765.513,
+      "error": null,
+      "iteration": 3,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.354,
+      "error": null,
+      "iteration": 4,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.565,
+      "error": null,
+      "iteration": 5,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.752,
+      "error": null,
+      "iteration": 6,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.968,
+      "error": null,
+      "iteration": 7,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.89,
+      "error": null,
+      "iteration": 8,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.367,
+      "error": null,
+      "iteration": 9,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.031,
+      "error": null,
+      "iteration": 10,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.505,
+      "error": null,
+      "iteration": 11,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1766.321,
+      "error": null,
+      "iteration": 12,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1766.238,
+      "error": null,
+      "iteration": 13,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.533,
+      "error": null,
+      "iteration": 14,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.319,
+      "error": null,
+      "iteration": 15,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.297,
+      "error": null,
+      "iteration": 16,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1764.102,
+      "error": null,
+      "iteration": 17,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.956,
+      "error": null,
+      "iteration": 18,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1767.952,
+      "error": null,
+      "iteration": 19,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.202,
+      "error": null,
+      "iteration": 20,
+      "scenario": "down",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.411,
+      "error": null,
+      "iteration": 1,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.419,
+      "error": null,
+      "iteration": 2,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1764.988,
+      "error": null,
+      "iteration": 3,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.93,
+      "error": null,
+      "iteration": 4,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1757.448,
+      "error": null,
+      "iteration": 5,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.104,
+      "error": null,
+      "iteration": 6,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.677,
+      "error": null,
+      "iteration": 7,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1756.355,
+      "error": null,
+      "iteration": 8,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.479,
+      "error": null,
+      "iteration": 9,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.423,
+      "error": null,
+      "iteration": 10,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.9,
+      "error": null,
+      "iteration": 11,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1758.771,
+      "error": null,
+      "iteration": 12,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.521,
+      "error": null,
+      "iteration": 13,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.135,
+      "error": null,
+      "iteration": 14,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.284,
+      "error": null,
+      "iteration": 15,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1764.415,
+      "error": null,
+      "iteration": 16,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1758.965,
+      "error": null,
+      "iteration": 17,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.354,
+      "error": null,
+      "iteration": 18,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1758.533,
+      "error": null,
+      "iteration": 19,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.512,
+      "error": null,
+      "iteration": 20,
+      "scenario": "left",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.649,
+      "error": null,
+      "iteration": 1,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1757.781,
+      "error": null,
+      "iteration": 2,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1764.029,
+      "error": null,
+      "iteration": 3,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.676,
+      "error": null,
+      "iteration": 4,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.628,
+      "error": null,
+      "iteration": 5,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.936,
+      "error": null,
+      "iteration": 6,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.513,
+      "error": null,
+      "iteration": 7,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.258,
+      "error": null,
+      "iteration": 8,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1757.318,
+      "error": null,
+      "iteration": 9,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1757.475,
+      "error": null,
+      "iteration": 10,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.267,
+      "error": null,
+      "iteration": 11,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.623,
+      "error": null,
+      "iteration": 12,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1758.824,
+      "error": null,
+      "iteration": 13,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.979,
+      "error": null,
+      "iteration": 14,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1766.701,
+      "error": null,
+      "iteration": 15,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.52,
+      "error": null,
+      "iteration": 16,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.449,
+      "error": null,
+      "iteration": 17,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.435,
+      "error": null,
+      "iteration": 18,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.331,
+      "error": null,
+      "iteration": 19,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.766,
+      "error": null,
+      "iteration": 20,
+      "scenario": "right",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.576,
+      "error": null,
+      "iteration": 1,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.915,
+      "error": null,
+      "iteration": 2,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1764.431,
+      "error": null,
+      "iteration": 3,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.021,
+      "error": null,
+      "iteration": 4,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1758.805,
+      "error": null,
+      "iteration": 5,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1756.466,
+      "error": null,
+      "iteration": 6,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.695,
+      "error": null,
+      "iteration": 7,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.87,
+      "error": null,
+      "iteration": 8,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.031,
+      "error": null,
+      "iteration": 9,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.422,
+      "error": null,
+      "iteration": 10,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1758.933,
+      "error": null,
+      "iteration": 11,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1757.092,
+      "error": null,
+      "iteration": 12,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.238,
+      "error": null,
+      "iteration": 13,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.457,
+      "error": null,
+      "iteration": 14,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.801,
+      "error": null,
+      "iteration": 15,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1756.616,
+      "error": null,
+      "iteration": 16,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1755.44,
+      "error": null,
+      "iteration": 17,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1758.41,
+      "error": null,
+      "iteration": 18,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.364,
+      "error": null,
+      "iteration": 19,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.535,
+      "error": null,
+      "iteration": 20,
+      "scenario": "short",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.345,
+      "error": null,
+      "iteration": 1,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.179,
+      "error": null,
+      "iteration": 2,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.933,
+      "error": null,
+      "iteration": 3,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.425,
+      "error": null,
+      "iteration": 4,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.647,
+      "error": null,
+      "iteration": 5,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.822,
+      "error": null,
+      "iteration": 6,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.902,
+      "error": null,
+      "iteration": 7,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.571,
+      "error": null,
+      "iteration": 8,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.289,
+      "error": null,
+      "iteration": 9,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.609,
+      "error": null,
+      "iteration": 10,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.555,
+      "error": null,
+      "iteration": 11,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1759.852,
+      "error": null,
+      "iteration": 12,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1762.821,
+      "error": null,
+      "iteration": 13,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1757.967,
+      "error": null,
+      "iteration": 14,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1756.898,
+      "error": null,
+      "iteration": 15,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1761.64,
+      "error": null,
+      "iteration": 16,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1763.365,
+      "error": null,
+      "iteration": 17,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.584,
+      "error": null,
+      "iteration": 18,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1757.995,
+      "error": null,
+      "iteration": 19,
+      "scenario": "long",
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1760.838,
+      "error": null,
+      "iteration": 20,
+      "scenario": "long",
+      "status": "succeeded"
+    }
+  ],
+  "safety": {
+    "allow_real_hardware": true,
+    "bounds": {
+      "x_max": 140,
+      "x_min": 0,
+      "y_max": 140,
+      "y_min": 0
+    },
+    "pen_up_z": 0,
+    "press_z": 2.0,
+    "references_modified": false,
+    "standard_device_api": "JxbArmAdapter",
+    "stop_on_first_failure": true
+  },
+  "sent_count": {
+    "close": 1,
+    "open_com": 1,
+    "xy": 3600,
+    "z": 242
+  },
+  "service_url": "http://127.0.0.1:8082/MyWcfService/getstring",
+  "started_at": "2026-06-14T17:14:34.124185+00:00",
+  "status": "completed_transport_success",
+  "summary": {
+    "failed": 0,
+    "per_scenario": {
+      "down": {
+        "attempted": 20,
+        "succeeded": 20
+      },
+      "left": {
+        "attempted": 20,
+        "succeeded": 20
+      },
+      "long": {
+        "attempted": 20,
+        "succeeded": 20
+      },
+      "right": {
+        "attempted": 20,
+        "succeeded": 20
+      },
+      "short": {
+        "attempted": 20,
+        "succeeded": 20
+      },
+      "up": {
+        "attempted": 20,
+        "succeeded": 20
+      }
+    },
+    "phone_recognition_status": "pending validation; no phone touch callback was captured",
+    "physical_motion_status": "pending user observation confirmation",
+    "succeeded": 120,
+    "total_attempts": 120
+  },
+  "swipe_config": {
+    "command_interval_ms": 50,
+    "duration_ms": 600,
+    "end_hold_ms": 120,
+    "point_count": 30,
+    "start_delay_ms": 120
+  },
+  "task": "P2-08 hardware swipe validation with real JxbService wire commands",
+  "wire_command_format": {
+    "xy": "X{x}Y{y}",
+    "z": "Z{z}"
+  }
+}
