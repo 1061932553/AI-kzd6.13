@@ -1,0 +1,41 @@
+"""Compatibility exports for P2 calibration deliverables."""
+
+from ai_arm_control.calibration import (
+    ArmLimits,
+    CalibrationGridPoint,
+    CalibrationPointRecord,
+    CalibrationPointStatus,
+    CalibrationSession,
+    CalibrationSessionError,
+    CalibrationSessionStatus,
+    HardwareBinding,
+    LegacyCalibrationImport,
+    ManualTouchCapture,
+    StandardCalibrationV2,
+    TouchCaptureStore,
+    TouchSample,
+    generate_4x4_grid,
+    import_legacy_calibration,
+    load_legacy_calibration,
+    validate_standard_ranges,
+)
+
+__all__ = [
+    "ArmLimits",
+    "CalibrationGridPoint",
+    "CalibrationPointRecord",
+    "CalibrationPointStatus",
+    "CalibrationSession",
+    "CalibrationSessionError",
+    "CalibrationSessionStatus",
+    "HardwareBinding",
+    "LegacyCalibrationImport",
+    "ManualTouchCapture",
+    "StandardCalibrationV2",
+    "TouchCaptureStore",
+    "TouchSample",
+    "generate_4x4_grid",
+    "import_legacy_calibration",
+    "load_legacy_calibration",
+    "validate_standard_ranges",
+]

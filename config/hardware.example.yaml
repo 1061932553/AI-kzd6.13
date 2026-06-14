@@ -1,0 +1,16 @@
+# P2-00 hardware test template.
+# This file is an example only. It must not be used as implicit authorization.
+
+hardware_tests:
+  enabled_env: "AI_ARM_CONTROL_ENABLE_HARDWARE_TESTS"
+  required_value: "1"
+
+arm:
+  device_id: "ARM-001"
+  service_url: "http://127.0.0.1:8082/MyWcfService/getstring"
+  com_port: "COM4"
+  allow_real_hardware: false
+
+camera:
+  name: "USB Camera2-B"
+  enabled: false
