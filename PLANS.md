@@ -839,3 +839,57 @@ Not included:
 - Script loops.
 - Image matching.
 - Real hardware validation.
+
+### P2-08 swipe trajectory executor
+
+Status: completed locally.
+
+Branch: `phase2/p2-08-swipe-trajectory`.
+
+Scope:
+
+- Generate straight-line and multi-point swipe trajectories.
+- Interpolate trajectory points and offsets across a configured duration.
+- Support point count, start delay, end hold, and easing mode.
+- Map all trajectory points through the existing coordinate mapper before pen down.
+- Stop remaining trajectory points on cancellation.
+- Attempt `pen_up` after cancellation or movement exceptions.
+- Provide an offline tuning CLI.
+
+Deliverables:
+
+- `src/ai_arm_control/actions/interpolation.py`
+- `src/ai_arm_control/actions/trajectory.py`
+- `src/ai_arm_control/actions/swipe.py`
+- `src/actions/interpolation.py`
+- `src/actions/trajectory.py`
+- `src/actions/swipe.py`
+- `tests/unit/test_trajectory.py`
+- `tests/hardware/test_swipe_hardware.py`
+- `tools/swipe_tuning.py`
+- `docs/swipe_trajectory.md`
+- `reports/phase-2-p2-08-swipe-trajectory.md`
+
+Verification:
+
+- `python -m pytest tests\unit\test_trajectory.py`: passed, `9 passed`.
+- `python -m pytest tests\hardware\test_swipe_hardware.py --hardware`: safe gate skipped, `1 skipped`.
+- `python -m tools.swipe_tuning --duration-ms 600 --points 30`: passed.
+- `python -m ruff check .`: passed.
+- `python -m pytest`: passed, `239 passed, 3 skipped`.
+
+Safety boundary:
+
+- Did not modify `references/`.
+- Did not access `127.0.0.1:8082`.
+- Did not open COM ports.
+- Did not access USB cameras.
+- Did not run EXE, DLL, BAT, installers, services, or admin operations.
+- Did not send real arm actions.
+
+Not included:
+
+- Gesture recognition.
+- Bezier or complex path smoothing.
+- Multi-finger actions.
+- Real hardware validation.

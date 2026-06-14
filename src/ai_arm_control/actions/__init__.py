@@ -1,5 +1,6 @@
 """Standard arm action layer."""
 
+from ai_arm_control.actions.interpolation import EasingMode
 from ai_arm_control.actions.long_press import execute_long_press
 from ai_arm_control.actions.models import (
     TouchActionConfig,
@@ -13,7 +14,16 @@ from ai_arm_control.actions.result import (
     TouchActionResult,
     TouchActionStatus,
 )
+from ai_arm_control.actions.swipe import SwipeAction, SwipeCancelToken, SwipeConfig, execute_swipe
 from ai_arm_control.actions.tap import TapAction, execute_tap
+from ai_arm_control.actions.trajectory import (
+    ArmTrajectoryPoint,
+    TrajectoryError,
+    TrajectoryPoint,
+    build_linear_trajectory,
+    build_polyline_trajectory,
+    map_trajectory_to_arm,
+)
 
 try:
     from ai_arm_control.actions.standard_arm import (
@@ -34,6 +44,11 @@ else:
 
 __all__ = [
     "TapAction",
+    "ArmTrajectoryPoint",
+    "EasingMode",
+    "SwipeAction",
+    "SwipeCancelToken",
+    "SwipeConfig",
     "TouchActionConfig",
     "TouchActionError",
     "TouchActionLogEntry",
@@ -41,7 +56,13 @@ __all__ = [
     "TouchActionStatus",
     "TouchActionTiming",
     "TouchTarget",
+    "TrajectoryError",
+    "TrajectoryPoint",
+    "build_linear_trajectory",
+    "build_polyline_trajectory",
+    "execute_swipe",
     "execute_long_press",
     "execute_multi_tap",
     "execute_tap",
+    "map_trajectory_to_arm",
 ] + _STANDARD_ARM_EXPORTS
