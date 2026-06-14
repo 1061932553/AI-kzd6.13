@@ -7,6 +7,7 @@ from ai_arm_control.vision.frame_source import (
     SimulatorFrameSource,
     TestVideoFrameSource,
 )
+from ai_arm_control.vision.screen_rectifier import ScreenRectifier
 from ai_arm_control.vision.screen_roi import ScreenROIExtractor, save_debug_ppm
 
 __all__ = [
@@ -14,6 +15,7 @@ __all__ = [
     "CameraServiceConfig",
     "FrameSource",
     "FrameSourceError",
+    "ScreenRectifier",
     "ScreenROIExtractor",
     "SimulatorFrameSource",
     "TestVideoFrameSource",

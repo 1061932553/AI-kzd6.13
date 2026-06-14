@@ -540,6 +540,68 @@ P1-09 完成后立即停止。不得自动开始真实 JxbService 适配器。
 - 标定计算。
 - PySide6 完整界面。
 
+### P2-04 手机屏幕四角与透视矫正
+
+状态：已完成。
+
+执行日期：2026-06-14。
+
+分支：`phase2/p2-04-homography`。
+
+范围：
+
+- 手动四角输入和顺序校验。
+- 四角坐标保存和加载。
+- 纯 Python 单应性矩阵计算。
+- 正向和反向坐标转换。
+- RGB24 离线透视矫正。
+- 标定数据有效性检查。
+- 标定预览图输出。
+
+安全边界：
+
+- 未修改 `references/`。
+- 未访问 `127.0.0.1:8082`。
+- 未打开 COM 串口。
+- 未访问 USB 摄像头或任何真实摄像头采集流。
+- 未运行第三方 EXE、DLL、BAT、安装程序或服务程序。
+- 未发送真实机械臂命令。
+
+交付物：
+
+- `src/ai_arm_control/calibration/homography.py`
+- `src/ai_arm_control/calibration/corner_selector.py`
+- `src/ai_arm_control/vision/screen_rectifier.py`
+- `src/calibration/homography.py`
+- `src/calibration/corner_selector.py`
+- `src/vision/screen_rectifier.py`
+- `tests/unit/test_homography.py`
+- `tests/fixtures/phone_tilted.jpg`
+- `tools/calibrate_corners.py`
+- `docs/homography_calibration.md`
+- `reports/phase-2-p2-04-homography.md`
+
+检查命令：
+
+- `python -m pytest tests\unit\test_homography.py`：通过，`7 passed`。
+- `python -m tools.calibrate_corners tests\fixtures\phone_tilted.jpg`：通过，生成标定 JSON 和 PPM 预览图。
+- `python -m pytest`：通过，`204 passed, 1 skipped`。
+- `python -m ruff check .`：通过。
+
+验收结果：
+
+- 四角顺序错误时能够识别。
+- 矫正后屏幕为矩形。
+- 正向和反向转换误差可量化。
+- 标定矩阵可以保存和重新加载。
+- 不连接机械臂也可完成测试。
+
+不包含：
+
+- 16 点点击标定。
+- 局部误差补偿。
+- 找图点击。
+
 ### P2-CAL-01 旧标定 JSON 导入
 
 状态：已完成。
@@ -610,5 +672,8 @@ P1-09 完成后立即停止。不得自动开始真实 JxbService 适配器。
 | 2026-06-14 | P2-03 | `FrameSource` / `TestVideoFrameSource` | 新增帧源协议和离线测试视频帧源 | 支持不访问真实摄像头的单帧/连续帧验证 | 摄像头服务、ROI 裁剪、后续视觉测试 |
 | 2026-06-14 | P2-03 | `CameraService` | 新增打开、读取、连续读取、断线重连、ROI 截取和调试截图接口 | 为后续找图点击和标定网页提供稳定离线帧入口 | 视觉服务、调试工具 |
 | 2026-06-14 | P2-03 | `ScreenROIExtractor` / `save_debug_ppm` | 新增屏幕区域裁剪和 PPM 调试截图保存 | 固化 ROI 提取和可重复调试输出 | ROI 测试、问题诊断 |
+| 2026-06-14 | P2-04 | `HomographyCalibration` / `HomographyMatrix` | 新增单应性标定模型、矩阵保存加载、正反向坐标转换和重投影误差 | 支持倾斜屏幕到标准矩形画面的离线矫正 | 后续 16 点标定、找图点击、视觉预览 |
+| 2026-06-14 | P2-04 | `CornerSelection` | 新增手动四角选择数据结构和四角顺序校验 | 保证四角输入顺序和有效性可审计 | 标定 CLI、后续标定服务 |
+| 2026-06-14 | P2-04 | `ScreenRectifier` | 新增 RGB24 透视矫正和预览输出接口 | 为后续视觉识别提供标准矩形屏幕画面 | 视觉模块、调试工具 |
 | 2026-06-14 | P2-CAL-01 | `StandardCalibrationV2` | 新增标定 schema v2 数据结构：`schema_version`、`device_id`、`camera_size`、`screen_roi`、`arm_limits`、`press_z`、`mapping_matrix`、`correction_grid`、`average_error`、`maximum_error` | 将旧标定数据转换为后续坐标映射、误差补偿和脚本动作闭环的统一输入 | 后续标定、坐标转换、动作执行、报告输出 |
 | 2026-06-14 | P2-CAL-01 | `import_legacy_calibration` / `load_legacy_calibration` | 新增旧 JSON 只读导入接口，返回标准标定数据、硬件绑定信息和待验证标记 | 旧 JSON 不能作为运行时配置直接改写，必须转换为项目标准模型 | 标定导入、配置迁移、离线测试 |

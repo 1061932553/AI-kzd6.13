@@ -1,0 +1,12 @@
+{
+  "format": "ai-arm-control-rgb-json-v1",
+  "device_id": "ARM-FIXTURE",
+  "width": 8,
+  "height": 6,
+  "channels": 3,
+  "corners": [[1, 1], [5, 0], [6, 4], [0, 5]],
+  "output_size": [4, 3],
+  "frames": [
+    {"fill": [20, 40, 80]}
+  ]
+}
