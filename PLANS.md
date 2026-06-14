@@ -357,6 +357,65 @@ P1-09 完成后立即停止。不得自动开始真实 JxbService 适配器。
 - 动作脚本。
 - 人工模式。
 
+### P2-01 旧标定 JSON 导入与标准数据模型
+
+状态：已完成。
+
+执行日期：2026-06-14。
+
+分支：`phase2/p2-01-legacy-calibration-import`。
+
+范围：
+
+- 解析旧标定 JSON 中的图像分辨率、手机屏幕区域、触控笔下降距离、机械臂活动极限、设备编号和服务地址。
+- 解析旧 `config.json` 中的摄像头和机械臂绑定信息。
+- 支持中文字段名称和部分英文别名。
+- 处理字段缺失、字段类型错误和超出范围。
+- 输出 `schema_version: "2.0"` 标准标定 JSON。
+
+安全边界：
+
+- 未修改 `references/`。
+- 未访问 `127.0.0.1:8082`。
+- 未打开 COM 串口。
+- 未访问 USB 摄像头。
+- 未运行第三方 EXE、DLL、BAT、安装程序或服务程序。
+- 未发送真实机械臂命令。
+
+交付物：
+
+- `src/ai_arm_control/calibration/models.py`
+- `src/ai_arm_control/calibration/legacy_importer.py`
+- `src/ai_arm_control/calibration/validator.py`
+- `src/calibration/models.py`
+- `src/calibration/legacy_importer.py`
+- `src/calibration/validator.py`
+- `tests/unit/test_legacy_importer.py`
+- `docs/calibration_schema.md`
+- `tools/import_legacy_calibration.py`
+- `reports/phase-2-p2-01-legacy-calibration-import.md`
+
+检查命令：
+
+- `python -m pytest tests\unit\test_legacy_importer.py`：通过，`9 passed`。
+- `python -m tools.import_legacy_calibration references\main软件发客户-20260531\main\me_config\USBVID_1A86&PID_75235&2B28DE69&0&8USBVID_1A86&PID_75235&2B28DE69&0&8\1.json`：通过，输出标准 JSON。
+- `python -m pytest`：通过，`174 passed, 1 skipped`。
+- `python -m ruff check .`：通过。
+
+验收结果：
+
+- 正确旧文件可以成功导入。
+- 错误文件给出明确错误信息。
+- 原始文件不被修改。
+- 导入后生成标准 JSON。
+- 相同输入产生相同输出。
+
+不包含：
+
+- 坐标转换。
+- 误差补偿。
+- 实机点击。
+
 ### P2-CAL-01 旧标定 JSON 导入
 
 状态：已完成。
@@ -417,5 +476,9 @@ P1-09 完成后立即停止。不得自动开始真实 JxbService 适配器。
 |---|---|---|---|---|---|
 | 2026-06-14 | P2-00 | `StandardDeviceAPI` | 冻结并补齐直接设备接口：`connect`、`disconnect`、`home`、`move_xy`、`pen_down`、`pen_up`、`stop`、`get_status` | 为后续坐标映射、标定、脚本动作闭环提供统一入口 | 机械臂适配器、单元测试、后续动作执行器 |
 | 2026-06-14 | P2-00 | `JxbArmAdapter` | 新增冻结接口的便捷方法，内部仍通过 `execute()` 和现有安全校验执行 | 让模拟配置和真实配置形态共享同一公开接口，不绕过安全边界 | 适配器调用方、诊断和后续任务 |
+| 2026-06-14 | P2-01 | `StandardCalibrationV2` | 拆分为独立 `models.py`，新增标准标定模型校验和稳定 `to_dict()` 输出 | 冻结旧标定导入后的内部统一数据格式 | 标定导入、后续坐标映射、误差报告 |
+| 2026-06-14 | P2-01 | `HardwareBinding` | 新增硬件绑定模型，保存服务地址、COM、摄像头名称和 USB 唯一标识，不触发连接 | 将旧绑定信息作为只读导入元数据保留 | 配置迁移、诊断报告 |
+| 2026-06-14 | P2-01 | `load_legacy_calibration` / `import_legacy_calibration` | 支持标定文件单独导入、可选旧设备配置、中文字段名和英文别名 | 满足离线 CLI 和不同版本旧 JSON 导入需求 | 标定 CLI、单元测试、后续标定流程 |
+| 2026-06-14 | P2-01 | `tools.import_legacy_calibration` | 新增离线导入 CLI，默认输出标准标定 JSON，可选 `--full` 输出绑定和待验证信息 | 提供可重复验证命令，不访问真实硬件 | 开发验证、报告生成 |
 | 2026-06-14 | P2-CAL-01 | `StandardCalibrationV2` | 新增标定 schema v2 数据结构：`schema_version`、`device_id`、`camera_size`、`screen_roi`、`arm_limits`、`press_z`、`mapping_matrix`、`correction_grid`、`average_error`、`maximum_error` | 将旧标定数据转换为后续坐标映射、误差补偿和脚本动作闭环的统一输入 | 后续标定、坐标转换、动作执行、报告输出 |
 | 2026-06-14 | P2-CAL-01 | `import_legacy_calibration` / `load_legacy_calibration` | 新增旧 JSON 只读导入接口，返回标准标定数据、硬件绑定信息和待验证标记 | 旧 JSON 不能作为运行时配置直接改写，必须转换为项目标准模型 | 标定导入、配置迁移、离线测试 |
