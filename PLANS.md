@@ -677,3 +677,56 @@ P1-09 完成后立即停止。不得自动开始真实 JxbService 适配器。
 | 2026-06-14 | P2-04 | `ScreenRectifier` | 新增 RGB24 透视矫正和预览输出接口 | 为后续视觉识别提供标准矩形屏幕画面 | 视觉模块、调试工具 |
 | 2026-06-14 | P2-CAL-01 | `StandardCalibrationV2` | 新增标定 schema v2 数据结构：`schema_version`、`device_id`、`camera_size`、`screen_roi`、`arm_limits`、`press_z`、`mapping_matrix`、`correction_grid`、`average_error`、`maximum_error` | 将旧标定数据转换为后续坐标映射、误差补偿和脚本动作闭环的统一输入 | 后续标定、坐标转换、动作执行、报告输出 |
 | 2026-06-14 | P2-CAL-01 | `import_legacy_calibration` / `load_legacy_calibration` | 新增旧 JSON 只读导入接口，返回标准标定数据、硬件绑定信息和待验证标记 | 旧 JSON 不能作为运行时配置直接改写，必须转换为项目标准模型 | 标定导入、配置迁移、离线测试 |
+
+### P2-05 16-point calibration data collection
+
+Status: completed locally.
+
+Branch: `phase2/p2-05-calibration-session`.
+
+Scope:
+
+- Generate deterministic 4x4 normalized calibration points with unique point ids.
+- Execute one calibration point per session step through an injected executor.
+- Support pause, resume, cancel, save/load, manual touch input, and web touch callback capture.
+- Preserve raw action and touch events in session JSON.
+- Keep real hardware mode behind an explicit second confirmation and leave the real runner disabled in this offline package.
+
+Deliverables:
+
+- `src/ai_arm_control/calibration/grid_generator.py`
+- `src/ai_arm_control/calibration/session.py`
+- `src/ai_arm_control/calibration/touch_capture.py`
+- `src/ai_arm_control/calibration_web/`
+- `src/calibration/grid_generator.py`
+- `src/calibration/session.py`
+- `src/calibration/touch_capture.py`
+- `src/calibration_web/`
+- `tests/unit/test_grid_generator.py`
+- `tools/run_16_point_calibration.py`
+- `docs/calibration_session.md`
+- `reports/phase-2-p2-05-calibration-session.md`
+
+Verification:
+
+- `python -m pytest tests\unit\test_grid_generator.py`: passed, `11 passed`.
+- `python -m tools.run_16_point_calibration --device simulator`: passed.
+- `python -m tools.run_16_point_calibration --device ARM-001 --hardware`: blocked before action without `--confirm-hardware`.
+- `python -m pytest`: passed, `215 passed, 1 skipped`.
+- `python -m ruff check .`: passed.
+
+Safety boundary:
+
+- Did not modify `references/`.
+- Did not access `127.0.0.1:8082`.
+- Did not open COM ports.
+- Did not access USB cameras.
+- Did not run EXE, DLL, BAT, installers, services, or admin operations.
+- Did not send real arm actions.
+
+Not included:
+
+- Error compensation calculation.
+- Click success rate report.
+- Formal script execution.
+- Real hardware calibration execution.
