@@ -1978,7 +1978,12 @@
   },
   "service_url": "http://127.0.0.1:8082/MyWcfService/getstring",
   "started_at": "2026-06-14T17:07:02.747961+00:00",
-  "status": "completed",
+  "status": "invalidated_no_physical_motion",
+  "invalidation": {
+    "reason": "This run used simulator-style MOVE_XY/MOVE_Z wire commands. The user observed that the real device did not move.",
+    "physical_motion": "failed_by_user_observation",
+    "superseded_by": "reports/phase-2-p2-08-hardware-swipe-validation-real-wire.md"
+  },
   "summary": {
     "failed": 0,
     "per_scenario": {
