@@ -416,6 +416,66 @@ P1-09 完成后立即停止。不得自动开始真实 JxbService 适配器。
 - 误差补偿。
 - 实机点击。
 
+### P2-02 坐标模型与基础映射核心
+
+状态：已完成。
+
+执行日期：2026-06-14。
+
+分支：`phase2/p2-02-coordinate-mapping`。
+
+范围：
+
+- 新增摄像头原始像素、手机屏幕像素、归一化坐标和机械臂 XY 坐标模型。
+- 实现归一化坐标校验。
+- 实现屏幕 ROI 转换。
+- 实现机械臂 XY 基础映射。
+- 支持 X、Y 方向翻转。
+- 实现边界限制和越界拒绝。
+- 增加往返转换测试。
+
+安全边界：
+
+- 未修改 `references/`。
+- 未访问 `127.0.0.1:8082`。
+- 未打开 COM 串口。
+- 未访问 USB 摄像头。
+- 未运行第三方 EXE、DLL、BAT、安装程序或服务程序。
+- 未发送真实机械臂命令。
+
+交付物：
+
+- `src/ai_arm_control/coordinates/models.py`
+- `src/ai_arm_control/coordinates/normalizer.py`
+- `src/ai_arm_control/coordinates/mapper.py`
+- `src/ai_arm_control/coordinates/bounds.py`
+- `src/coordinates/models.py`
+- `src/coordinates/normalizer.py`
+- `src/coordinates/mapper.py`
+- `src/coordinates/bounds.py`
+- `tests/unit/test_coordinate_mapper.py`
+- `docs/coordinate_mapping.md`
+- `reports/phase-2-p2-02-coordinate-mapping.md`
+
+检查命令：
+
+- `python -m pytest tests\unit\test_coordinate_mapper.py`：通过，`17 passed`。
+- `python -m pytest`：通过，`191 passed, 1 skipped`。
+- `python -m ruff check .`：通过。
+
+验收结果：
+
+- 不依赖摄像头和机械臂即可测试。
+- 越界坐标在纯计算层被拒绝，不能进入动作发送路径。
+- 浮点误差按 `1e-6` 容差断言。
+- 坐标转换接口无 UI 依赖。
+
+不包含：
+
+- 透视矫正。
+- 误差补偿。
+- 动作执行。
+
 ### P2-CAL-01 旧标定 JSON 导入
 
 状态：已完成。
@@ -480,5 +540,8 @@ P1-09 完成后立即停止。不得自动开始真实 JxbService 适配器。
 | 2026-06-14 | P2-01 | `HardwareBinding` | 新增硬件绑定模型，保存服务地址、COM、摄像头名称和 USB 唯一标识，不触发连接 | 将旧绑定信息作为只读导入元数据保留 | 配置迁移、诊断报告 |
 | 2026-06-14 | P2-01 | `load_legacy_calibration` / `import_legacy_calibration` | 支持标定文件单独导入、可选旧设备配置、中文字段名和英文别名 | 满足离线 CLI 和不同版本旧 JSON 导入需求 | 标定 CLI、单元测试、后续标定流程 |
 | 2026-06-14 | P2-01 | `tools.import_legacy_calibration` | 新增离线导入 CLI，默认输出标准标定 JSON，可选 `--full` 输出绑定和待验证信息 | 提供可重复验证命令，不访问真实硬件 | 开发验证、报告生成 |
+| 2026-06-14 | P2-02 | `NormalizedPoint` / `ScreenPixel` / `CameraPixel` / `ArmXY` | 新增四类坐标模型和数值校验 | 统一脚本坐标、屏幕像素、摄像头像素和机械臂 XY 的表达 | 坐标映射、后续标定和动作执行 |
+| 2026-06-14 | P2-02 | `CoordinateMapper` | 新增屏幕 ROI、机械臂边界、X/Y 翻转和往返转换接口 | 建立脚本归一化坐标到机械臂 XY 的基础离线映射 | 后续动作执行器、标定补偿和脚本 runner |
+| 2026-06-14 | P2-02 | `Bounds2D` / `ensure_in_bounds` | 新增边界模型和越界拒绝工具 | 保证越界坐标在进入动作层之前失败 | 坐标映射、安全校验 |
 | 2026-06-14 | P2-CAL-01 | `StandardCalibrationV2` | 新增标定 schema v2 数据结构：`schema_version`、`device_id`、`camera_size`、`screen_roi`、`arm_limits`、`press_z`、`mapping_matrix`、`correction_grid`、`average_error`、`maximum_error` | 将旧标定数据转换为后续坐标映射、误差补偿和脚本动作闭环的统一输入 | 后续标定、坐标转换、动作执行、报告输出 |
 | 2026-06-14 | P2-CAL-01 | `import_legacy_calibration` / `load_legacy_calibration` | 新增旧 JSON 只读导入接口，返回标准标定数据、硬件绑定信息和待验证标记 | 旧 JSON 不能作为运行时配置直接改写，必须转换为项目标准模型 | 标定导入、配置迁移、离线测试 |
