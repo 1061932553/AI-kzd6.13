@@ -1,0 +1,27 @@
+{
+  "schema_version": "2.0",
+  "session_id": "cal-fixed-p2-06",
+  "device_id": "simulator",
+  "status": "completed",
+  "created_at": "2026-06-15T00:00:00.000+00:00",
+  "updated_at": "2026-06-15T00:00:00.000+00:00",
+  "records": [
+    {"point": {"point_id": "P01", "row": 0, "column": 0, "target": {"x": 0.1, "y": 0.1}}, "status": "completed", "actual": {"x": 0.111, "y": 0.081}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P02", "row": 0, "column": 1, "target": {"x": 0.3666666667, "y": 0.1}}, "status": "completed", "actual": {"x": 0.3786666667, "y": 0.081}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P03", "row": 0, "column": 2, "target": {"x": 0.6333333333, "y": 0.1}}, "status": "completed", "actual": {"x": 0.6463333333, "y": 0.081}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P04", "row": 0, "column": 3, "target": {"x": 0.9, "y": 0.1}}, "status": "completed", "actual": {"x": 0.914, "y": 0.081}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P05", "row": 1, "column": 0, "target": {"x": 0.1, "y": 0.3666666667}}, "status": "completed", "actual": {"x": 0.111, "y": 0.3496666667}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P06", "row": 1, "column": 1, "target": {"x": 0.3666666667, "y": 0.3666666667}}, "status": "completed", "actual": {"x": 0.3786666667, "y": 0.3496666667}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P07", "row": 1, "column": 2, "target": {"x": 0.6333333333, "y": 0.3666666667}}, "status": "completed", "actual": {"x": 0.6463333333, "y": 0.3496666667}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P08", "row": 1, "column": 3, "target": {"x": 0.9, "y": 0.3666666667}}, "status": "completed", "actual": {"x": 0.914, "y": 0.3496666667}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P09", "row": 2, "column": 0, "target": {"x": 0.1, "y": 0.6333333333}}, "status": "completed", "actual": {"x": 0.111, "y": 0.6173333333}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P10", "row": 2, "column": 1, "target": {"x": 0.3666666667, "y": 0.6333333333}}, "status": "completed", "actual": {"x": 0.3786666667, "y": 0.6173333333}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P11", "row": 2, "column": 2, "target": {"x": 0.6333333333, "y": 0.6333333333}}, "status": "completed", "actual": {"x": 0.6463333333, "y": 0.6173333333}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P12", "row": 2, "column": 3, "target": {"x": 0.9, "y": 0.6333333333}}, "status": "completed", "actual": {"x": 0.914, "y": 0.6173333333}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P13", "row": 3, "column": 0, "target": {"x": 0.1, "y": 0.9}}, "status": "completed", "actual": {"x": 0.111, "y": 0.886}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P14", "row": 3, "column": 1, "target": {"x": 0.3666666667, "y": 0.9}}, "status": "completed", "actual": {"x": 0.3786666667, "y": 0.886}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P15", "row": 3, "column": 2, "target": {"x": 0.6333333333, "y": 0.9}}, "status": "completed", "actual": {"x": 0.6463333333, "y": 0.886}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"},
+    {"point": {"point_id": "P16", "row": 3, "column": 3, "target": {"x": 0.9, "y": 0.9}}, "status": "completed", "actual": {"x": 0.914, "y": 0.886}, "touch_source": "manual", "action_receipts": [], "updated_at": "2026-06-15T00:00:00.000+00:00"}
+  ],
+  "raw_events": []
+}
