@@ -476,6 +476,70 @@ P1-09 完成后立即停止。不得自动开始真实 JxbService 适配器。
 - 误差补偿。
 - 动作执行。
 
+### P2-03 摄像头采集与屏幕区域提取
+
+状态：已完成。
+
+执行日期：2026-06-14。
+
+分支：`phase2/p2-03-camera-roi`。
+
+范围：
+
+- 根据帧源配置打开离线帧源。
+- 获取单帧和连续读取。
+- 断线后自动重连并记录日志。
+- 检测帧分辨率。
+- 按配置裁剪手机屏幕 ROI。
+- 保存包含时间和设备编号的 PPM 调试截图。
+- 使用测试视频源代替真实摄像头。
+
+安全边界：
+
+- 未修改 `references/`。
+- 未访问 `127.0.0.1:8082`。
+- 未打开 COM 串口。
+- 未访问 USB 摄像头或任何真实摄像头采集流。
+- 未运行第三方 EXE、DLL、BAT、安装程序或服务程序。
+- 未发送真实机械臂命令。
+
+交付物：
+
+- `src/ai_arm_control/vision/frame_source.py`
+- `src/ai_arm_control/vision/camera_service.py`
+- `src/ai_arm_control/vision/screen_roi.py`
+- `src/vision/frame_source.py`
+- `src/vision/camera_service.py`
+- `src/vision/screen_roi.py`
+- `tests/unit/test_screen_roi.py`
+- `tests/integration/test_video_source.py`
+- `tools/camera_preview.py`
+- `test_video.mp4`
+- `docs/camera_service.md`
+- `reports/phase-2-p2-03-camera-roi.md`
+
+检查命令：
+
+- `python -m pytest tests\unit\test_screen_roi.py`：通过，`5 passed`。
+- `python -m pytest tests\integration\test_video_source.py`：通过，`1 passed`。
+- `python -m tools.camera_preview --source test_video.mp4`：通过，生成 PPM 调试截图路径。
+- `python -m pytest`：通过，`197 passed, 1 skipped`。
+- `python -m ruff check .`：通过。
+
+验收结果：
+
+- 测试视频可以稳定读取。
+- ROI 尺寸与配置一致。
+- 摄像头断开时程序不崩溃。
+- 重连过程有日志。
+- 保存的截图包含时间和设备编号。
+
+不包含：
+
+- 找图。
+- 标定计算。
+- PySide6 完整界面。
+
 ### P2-CAL-01 旧标定 JSON 导入
 
 状态：已完成。
@@ -543,5 +607,8 @@ P1-09 完成后立即停止。不得自动开始真实 JxbService 适配器。
 | 2026-06-14 | P2-02 | `NormalizedPoint` / `ScreenPixel` / `CameraPixel` / `ArmXY` | 新增四类坐标模型和数值校验 | 统一脚本坐标、屏幕像素、摄像头像素和机械臂 XY 的表达 | 坐标映射、后续标定和动作执行 |
 | 2026-06-14 | P2-02 | `CoordinateMapper` | 新增屏幕 ROI、机械臂边界、X/Y 翻转和往返转换接口 | 建立脚本归一化坐标到机械臂 XY 的基础离线映射 | 后续动作执行器、标定补偿和脚本 runner |
 | 2026-06-14 | P2-02 | `Bounds2D` / `ensure_in_bounds` | 新增边界模型和越界拒绝工具 | 保证越界坐标在进入动作层之前失败 | 坐标映射、安全校验 |
+| 2026-06-14 | P2-03 | `FrameSource` / `TestVideoFrameSource` | 新增帧源协议和离线测试视频帧源 | 支持不访问真实摄像头的单帧/连续帧验证 | 摄像头服务、ROI 裁剪、后续视觉测试 |
+| 2026-06-14 | P2-03 | `CameraService` | 新增打开、读取、连续读取、断线重连、ROI 截取和调试截图接口 | 为后续找图点击和标定网页提供稳定离线帧入口 | 视觉服务、调试工具 |
+| 2026-06-14 | P2-03 | `ScreenROIExtractor` / `save_debug_ppm` | 新增屏幕区域裁剪和 PPM 调试截图保存 | 固化 ROI 提取和可重复调试输出 | ROI 测试、问题诊断 |
 | 2026-06-14 | P2-CAL-01 | `StandardCalibrationV2` | 新增标定 schema v2 数据结构：`schema_version`、`device_id`、`camera_size`、`screen_roi`、`arm_limits`、`press_z`、`mapping_matrix`、`correction_grid`、`average_error`、`maximum_error` | 将旧标定数据转换为后续坐标映射、误差补偿和脚本动作闭环的统一输入 | 后续标定、坐标转换、动作执行、报告输出 |
 | 2026-06-14 | P2-CAL-01 | `import_legacy_calibration` / `load_legacy_calibration` | 新增旧 JSON 只读导入接口，返回标准标定数据、硬件绑定信息和待验证标记 | 旧 JSON 不能作为运行时配置直接改写，必须转换为项目标准模型 | 标定导入、配置迁移、离线测试 |
