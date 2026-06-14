@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0",
+  "device_id": "ARM-TEST",
+  "camera_size": [540, 960],
+  "screen_roi": [64, 32, 482, 911],
+  "arm_limits": {
+    "x_min": 0,
+    "x_max": 366,
+    "y_min": 0,
+    "y_max": 160
+  },
+  "press_z": 7.0,
+  "mapping_matrix": [],
+  "correction_grid": [],
+  "average_error": null,
+  "maximum_error": null
+}
