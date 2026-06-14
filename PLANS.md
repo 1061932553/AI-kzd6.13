@@ -730,3 +730,56 @@ Not included:
 - Click success rate report.
 - Formal script execution.
 - Real hardware calibration execution.
+
+### P2-06 local correction grid and calibration report
+
+Status: completed locally.
+
+Branch: `phase2/p2-06-correction-report`.
+
+Scope:
+
+- Compute X, Y, and total error for completed 16-point sessions.
+- Build a 4x4 correction grid from fixed calibration samples.
+- Apply bilinear interpolation and local compensation.
+- Route compensated normalized points through the existing coordinate mapper.
+- Generate average, maximum, and P95 error summaries.
+- Save versioned calibration reports and support rollback to the previous version.
+
+Deliverables:
+
+- `src/ai_arm_control/calibration/correction_grid.py`
+- `src/ai_arm_control/calibration/error_metrics.py`
+- `src/ai_arm_control/calibration/report.py`
+- `src/calibration/correction_grid.py`
+- `src/calibration/error_metrics.py`
+- `src/calibration/report.py`
+- `tests/unit/test_correction_grid.py`
+- `tests/fixtures/calibration_session.json`
+- `tools/generate_calibration_report.py`
+- `docs/calibration_correction_report.md`
+- `reports/phase-2-p2-06-correction-report.md`
+- `reports/calibration/`
+
+Verification:
+
+- `python -m pytest tests\unit\test_correction_grid.py`: passed, `8 passed`.
+- `python -m tools.generate_calibration_report tests\fixtures\calibration_session.json`: passed.
+- `python -m ruff check .`: passed.
+- `python -m pytest`: passed, `223 passed, 1 skipped`.
+
+Safety boundary:
+
+- Did not modify `references/`.
+- Did not access `127.0.0.1:8082`.
+- Did not open COM ports.
+- Did not access USB cameras.
+- Did not run EXE, DLL, BAT, installers, services, or admin operations.
+- Did not send real arm actions.
+
+Not included:
+
+- Action execution.
+- Image matching.
+- Script parsing.
+- Real hardware validation.
