@@ -949,3 +949,57 @@ Not included:
 - Script execution.
 - Scheduling.
 - Agent tags.
+
+### P2-10 script runner and state machine
+
+Status: completed locally.
+
+Branch: `phase2/p2-10-script-runner`.
+
+Scope:
+
+- Execute already validated scripts in sequence.
+- Track states `IDLE`, `RUNNING`, `PAUSED`, `CANCELLING`, `COMPLETED`, and
+  `FAILED`.
+- Track current step path.
+- Support pause, resume, cancel, bounded retry, timeout detection, failure stop,
+  stop action, and persistent history.
+- Prevent two active runs for the same `device_id` in the current process.
+- Save every step start and finish record.
+
+Deliverables:
+
+- `src/ai_arm_control/scripts/runner.py`
+- `src/ai_arm_control/scripts/state_machine.py`
+- `src/ai_arm_control/scripts/context.py`
+- `src/ai_arm_control/scripts/history.py`
+- `src/scripts/runner.py`
+- `src/scripts/state_machine.py`
+- `src/scripts/context.py`
+- `src/scripts/history.py`
+- `tests/unit/test_script_runner.py`
+- `tests/integration/test_script_runner_simulator.py`
+- `docs/script_runner.md`
+- `reports/phase-2-p2-10-script-runner.md`
+
+Verification:
+
+- `python -m pytest tests\unit\test_script_runner.py`: passed, `8 passed`.
+- `python -m pytest tests\integration\test_script_runner_simulator.py`: passed, `1 passed`.
+- `python -m ruff check .`: passed.
+- `python -m pytest`: passed, `260 passed, 3 skipped`.
+
+Safety boundary:
+
+- Did not modify `references/`.
+- Did not access `127.0.0.1:8082`.
+- Did not open COM ports.
+- Did not access USB cameras.
+- Did not run EXE, DLL, BAT, installers, services, or admin operations.
+- Did not send real arm actions.
+
+Not included:
+
+- Scheduled tasks.
+- Random labels.
+- OpenClaw Agent.
