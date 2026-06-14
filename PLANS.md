@@ -893,3 +893,59 @@ Not included:
 - Bezier or complex path smoothing.
 - Multi-finger actions.
 - Real hardware validation.
+
+### P2-09 script format, parser, and static validation
+
+Status: completed locally.
+
+Branch: `phase2/p2-09-script-validator`.
+
+Scope:
+
+- Define script version `1.0`.
+- Validate `tap`, `long_press`, `multi_tap`, `swipe`, `wait`, `home`, `repeat`,
+  and `stop`.
+- Reject unknown actions, unknown fields, missing required fields, invalid
+  normalized coordinates, invalid timing ranges, invalid repeat and multi-tap
+  counts, unsupported script versions, excessive top-level steps, excessive
+  repeat expansion, and unbounded loops.
+- Provide offline parser, JSON schema, examples, and validation CLI.
+
+Deliverables:
+
+- `src/ai_arm_control/scripts/schema.py`
+- `src/ai_arm_control/scripts/parser.py`
+- `src/ai_arm_control/scripts/validator.py`
+- `src/scripts/schema.py`
+- `src/scripts/parser.py`
+- `src/scripts/validator.py`
+- `schemas/script_v1.json`
+- `examples/scripts/basic_actions.json`
+- `examples/scripts/invalid_actions.json`
+- `tests/unit/test_script_validator.py`
+- `tools/validate_script.py`
+- `docs/script_format.md`
+- `reports/phase-2-p2-09-script-validator.md`
+
+Verification:
+
+- `python -m pytest tests\unit\test_script_validator.py`: passed, `12 passed`.
+- `python -m tools.validate_script examples\scripts\basic_actions.json`: passed.
+- `python -m tools.validate_script examples\scripts\invalid_actions.json`: failed safely with structured validation issues.
+- `python -m ruff check .`: passed.
+- `python -m pytest`: passed, `251 passed, 3 skipped`.
+
+Safety boundary:
+
+- Did not modify `references/`.
+- Did not access `127.0.0.1:8082`.
+- Did not open COM ports.
+- Did not access USB cameras.
+- Did not run EXE, DLL, BAT, installers, services, or admin operations.
+- Did not send real arm actions.
+
+Not included:
+
+- Script execution.
+- Scheduling.
+- Agent tags.
