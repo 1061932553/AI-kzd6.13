@@ -783,3 +783,59 @@ Not included:
 - Image matching.
 - Script parsing.
 - Real hardware validation.
+
+### P2-07 tap, long press, and multi tap primitives
+
+Status: completed locally.
+
+Branch: `phase2/p2-07-touch-actions`.
+
+Scope:
+
+- Implement `tap`, `long_press`, and `multi_tap` primitives.
+- Convert normalized coordinates through optional correction grid and existing coordinate mapper.
+- Validate arm bounds before sending motion.
+- Execute `move_xy`, settle wait, `pen_down`, hold, `pen_up`, and up delay.
+- Attempt `pen_up` after failed steps.
+- Return structured results with complete ordered logs.
+
+Deliverables:
+
+- `src/ai_arm_control/actions/models.py`
+- `src/ai_arm_control/actions/result.py`
+- `src/ai_arm_control/actions/tap.py`
+- `src/ai_arm_control/actions/long_press.py`
+- `src/ai_arm_control/actions/multi_tap.py`
+- `src/actions/models.py`
+- `src/actions/result.py`
+- `src/actions/tap.py`
+- `src/actions/long_press.py`
+- `src/actions/multi_tap.py`
+- `tests/unit/test_touch_actions.py`
+- `tests/hardware/test_touch_actions_hardware.py`
+- `tests/conftest.py`
+- `docs/touch_actions.md`
+- `reports/phase-2-p2-07-touch-actions.md`
+
+Verification:
+
+- `python -m pytest tests\unit\test_touch_actions.py`: passed, `7 passed`.
+- `python -m pytest tests\hardware\test_touch_actions_hardware.py --hardware`: safe gate skipped, `1 skipped`.
+- `python -m ruff check .`: passed.
+- `python -m pytest`: passed, `230 passed, 2 skipped`.
+
+Safety boundary:
+
+- Did not modify `references/`.
+- Did not access `127.0.0.1:8082`.
+- Did not open COM ports.
+- Did not access USB cameras.
+- Did not run EXE, DLL, BAT, installers, services, or admin operations.
+- Did not send real arm actions.
+
+Not included:
+
+- Swipe.
+- Script loops.
+- Image matching.
+- Real hardware validation.
