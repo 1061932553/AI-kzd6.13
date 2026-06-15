@@ -1003,3 +1003,58 @@ Not included:
 - Scheduled tasks.
 - Random labels.
 - OpenClaw Agent.
+
+### P2-11 basic image tap
+
+Status: completed locally.
+
+Branch: `phase2/p2-11-tap-image`.
+
+Scope:
+
+- Match one RGB24 template inside a frame.
+- Support optional search rectangle, confidence threshold, retry count, timeout
+  config field, failed screenshot output, and highest-confidence selection.
+- Convert target center to normalized screen coordinates.
+- Route successful matches through the existing unified `execute_tap` action.
+- Prevent clicks when no target is found.
+
+Deliverables:
+
+- `src/ai_arm_control/vision/template_matcher.py`
+- `src/ai_arm_control/actions/tap_image.py`
+- `src/vision/template_matcher.py`
+- `src/actions/tap_image.py`
+- `assets/templates/confirm.ppm`
+- `tests/fixtures/screen.png`
+- `tests/fixtures/confirm.png`
+- `tests/fixtures/wrong.png`
+- `tests/unit/test_template_matcher.py`
+- `tests/integration/test_tap_image_simulator.py`
+- `tools/template_debugger.py`
+- `docs/tap_image.md`
+- `reports/phase-2-p2-11-tap-image.md`
+
+Verification:
+
+- `python -m pytest tests\unit\test_template_matcher.py`: passed, `5 passed`.
+- `python -m pytest tests\integration\test_tap_image_simulator.py`: passed, `2 passed`.
+- `python -m tools.template_debugger --image tests\fixtures\screen.png --template tests\fixtures\confirm.png`: passed.
+- `python -m ruff check .`: passed.
+- `python -m pytest`: passed, `267 passed, 3 skipped`.
+
+Safety boundary:
+
+- Did not modify `references/`.
+- Did not access `127.0.0.1:8082`.
+- Did not open COM ports.
+- Did not access USB cameras.
+- Did not run EXE, DLL, BAT, installers, services, or admin operations.
+- Did not send real arm actions.
+
+Not included:
+
+- OCR.
+- AI target detection.
+- Multiple-template logic.
+- Page flow judgment.

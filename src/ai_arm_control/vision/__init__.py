@@ -9,6 +9,14 @@ from ai_arm_control.vision.frame_source import (
 )
 from ai_arm_control.vision.screen_rectifier import ScreenRectifier
 from ai_arm_control.vision.screen_roi import ScreenROIExtractor, save_debug_ppm
+from ai_arm_control.vision.template_matcher import (
+    TemplateImage,
+    TemplateMatch,
+    TemplateMatcher,
+    TemplateMatchResult,
+    load_rgb_frame,
+    load_template_image,
+)
 
 __all__ = [
     "CameraService",
@@ -19,5 +27,11 @@ __all__ = [
     "ScreenROIExtractor",
     "SimulatorFrameSource",
     "TestVideoFrameSource",
+    "TemplateImage",
+    "TemplateMatch",
+    "TemplateMatcher",
+    "TemplateMatchResult",
+    "load_rgb_frame",
+    "load_template_image",
     "save_debug_ppm",
 ]

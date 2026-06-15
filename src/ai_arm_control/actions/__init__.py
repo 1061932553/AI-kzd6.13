@@ -16,6 +16,12 @@ from ai_arm_control.actions.result import (
 )
 from ai_arm_control.actions.swipe import SwipeAction, SwipeCancelToken, SwipeConfig, execute_swipe
 from ai_arm_control.actions.tap import TapAction, execute_tap
+from ai_arm_control.actions.tap_image import (
+    FrameProvider,
+    StaticFrameProvider,
+    TapImageConfig,
+    execute_tap_image,
+)
 from ai_arm_control.actions.trajectory import (
     ArmTrajectoryPoint,
     TrajectoryError,
@@ -58,11 +64,15 @@ __all__ = [
     "TouchTarget",
     "TrajectoryError",
     "TrajectoryPoint",
+    "FrameProvider",
+    "StaticFrameProvider",
+    "TapImageConfig",
     "build_linear_trajectory",
     "build_polyline_trajectory",
     "execute_swipe",
     "execute_long_press",
     "execute_multi_tap",
     "execute_tap",
+    "execute_tap_image",
     "map_trajectory_to_arm",
 ] + _STANDARD_ARM_EXPORTS
