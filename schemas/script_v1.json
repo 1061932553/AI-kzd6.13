@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/ai-arm-control/script_v1.json",
+  "title": "AI Arm Control Script v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["script_version", "steps"],
+  "properties": {
+    "script_version": {
+      "const": "1.0"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 500,
+      "items": {
+        "$ref": "#/$defs/step"
+      }
+    }
+  },
+  "$defs": {
+    "normalized": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "point": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        { "$ref": "#/$defs/normalized" },
+        { "$ref": "#/$defs/normalized" }
+      ]
+    },
+    "step": {
+      "oneOf": [
+        { "$ref": "#/$defs/tap" },
+        { "$ref": "#/$defs/long_press" },
+        { "$ref": "#/$defs/multi_tap" },
+        { "$ref": "#/$defs/swipe" },
+        { "$ref": "#/$defs/wait" },
+        { "$ref": "#/$defs/home" },
+        { "$ref": "#/$defs/repeat" },
+        { "$ref": "#/$defs/stop" }
+      ]
+    },
+    "timed_action_options": {
+      "properties": {
+        "timeout_ms": { "type": "integer", "minimum": 1, "maximum": 600000 },
+        "retry": { "type": "integer", "minimum": 0, "maximum": 5 }
+      }
+    },
+    "tap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "x", "y"],
+      "properties": {
+        "action": { "const": "tap" },
+        "x": { "$ref": "#/$defs/normalized" },
+        "y": { "$ref": "#/$defs/normalized" },
+        "hold_ms": { "type": "integer", "minimum": 1, "maximum": 5000 },
+        "timeout_ms": { "type": "integer", "minimum": 1, "maximum": 600000 },
+        "retry": { "type": "integer", "minimum": 0, "maximum": 5 }
+      }
+    },
+    "long_press": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "x", "y", "duration_ms"],
+      "properties": {
+        "action": { "const": "long_press" },
+        "x": { "$ref": "#/$defs/normalized" },
+        "y": { "$ref": "#/$defs/normalized" },
+        "duration_ms": { "type": "integer", "minimum": 500, "maximum": 5000 },
+        "timeout_ms": { "type": "integer", "minimum": 1, "maximum": 600000 },
+        "retry": { "type": "integer", "minimum": 0, "maximum": 5 }
+      }
+    },
+    "multi_tap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "x", "y", "count"],
+      "properties": {
+        "action": { "const": "multi_tap" },
+        "x": { "$ref": "#/$defs/normalized" },
+        "y": { "$ref": "#/$defs/normalized" },
+        "count": { "type": "integer", "minimum": 1, "maximum": 20 },
+        "interval_ms": { "type": "integer", "minimum": 0, "maximum": 5000 },
+        "hold_ms": { "type": "integer", "minimum": 1, "maximum": 5000 },
+        "timeout_ms": { "type": "integer", "minimum": 1, "maximum": 600000 },
+        "retry": { "type": "integer", "minimum": 0, "maximum": 5 }
+      }
+    },
+    "swipe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "duration_ms"],
+      "properties": {
+        "action": { "const": "swipe" },
+        "start": { "$ref": "#/$defs/point" },
+        "end": { "$ref": "#/$defs/point" },
+        "path": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "$ref": "#/$defs/point" }
+        },
+        "duration_ms": { "type": "integer", "minimum": 100, "maximum": 10000 },
+        "points": { "type": "integer", "minimum": 2, "maximum": 100 },
+        "start_delay_ms": { "type": "integer", "minimum": 0, "maximum": 5000 },
+        "end_hold_ms": { "type": "integer", "minimum": 0, "maximum": 5000 },
+        "timeout_ms": { "type": "integer", "minimum": 1, "maximum": 600000 },
+        "retry": { "type": "integer", "minimum": 0, "maximum": 5 }
+      }
+    },
+    "wait": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "duration_ms"],
+      "properties": {
+        "action": { "const": "wait" },
+        "duration_ms": { "type": "integer", "minimum": 0, "maximum": 600000 }
+      }
+    },
+    "home": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action"],
+      "properties": {
+        "action": { "const": "home" }
+      }
+    },
+    "repeat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "count", "steps"],
+      "properties": {
+        "action": { "const": "repeat" },
+        "count": { "type": "integer", "minimum": 1, "maximum": 100 },
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 500,
+          "items": { "$ref": "#/$defs/step" }
+        }
+      }
+    },
+    "stop": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action"],
+      "properties": {
+        "action": { "const": "stop" }
+      }
+    }
+  }
+}

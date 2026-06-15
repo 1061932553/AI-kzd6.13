@@ -1,0 +1,2028 @@
+{
+  "com_port": "COM4",
+  "connect": {
+    "command_id": "adapter-connect-000001",
+    "data": {
+      "resource_id": 1500
+    },
+    "device_id": "ARM-001",
+    "error": null,
+    "finished_at": "2026-06-14T17:07:02.751216+00:00",
+    "started_at": "2026-06-14T17:07:02.748071+00:00",
+    "state": "IDLE",
+    "success": true,
+    "trace_id": null
+  },
+  "device_id": "ARM-001",
+  "disconnect": {
+    "command_id": "adapter-close-003844",
+    "data": {
+      "resource_id": null
+    },
+    "device_id": "ARM-001",
+    "error": null,
+    "finished_at": "2026-06-14T17:10:24.626378+00:00",
+    "started_at": "2026-06-14T17:10:24.601628+00:00",
+    "state": "OFFLINE",
+    "success": true,
+    "trace_id": null
+  },
+  "finished_at": "2026-06-14T17:10:24.626409+00:00",
+  "hardware_authorized_by_user": true,
+  "mapping": {
+    "correction_grid": null,
+    "flip_x": false,
+    "flip_y": false,
+    "screen_roi": [
+      64,
+      32,
+      482,
+      911
+    ]
+  },
+  "results": [
+    {
+      "elapsed_ms": 1679.515,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 1,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1685.424,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 2,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1694.71,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 3,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.968,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 4,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.317,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 5,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.782,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 6,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.991,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 7,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1677.661,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 8,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.037,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 9,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1686.29,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 10,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1677.235,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 11,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.786,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 12,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.697,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 13,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.168,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 14,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.798,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 15,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.766,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 16,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.459,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 17,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1684.237,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 18,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.438,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 19,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1677.386,
+      "end": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "error": null,
+      "iteration": 20,
+      "log_count": 64,
+      "scenario": "up",
+      "start": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.915,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 1,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1677.065,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 2,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.255,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 3,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.291,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 4,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.244,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 5,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.369,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 6,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.481,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 7,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1686.716,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 8,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.879,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 9,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.006,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 10,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.092,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 11,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.449,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 12,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.116,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 13,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.206,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 14,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.269,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 15,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.135,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 16,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.499,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 17,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1677.656,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 18,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.119,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 19,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.576,
+      "end": {
+        "x": 0.5,
+        "y": 0.8
+      },
+      "error": null,
+      "iteration": 20,
+      "log_count": 64,
+      "scenario": "down",
+      "start": {
+        "x": 0.5,
+        "y": 0.2
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.25,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 1,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.716,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 2,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.123,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 3,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.799,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 4,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.247,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 5,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.316,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 6,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.234,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 7,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.323,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 8,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.773,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 9,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.879,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 10,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.507,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 11,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.75,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 12,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.753,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 13,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1684.036,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 14,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.186,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 15,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.227,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 16,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1676.159,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 17,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.861,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 18,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1684.379,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 19,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.953,
+      "end": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 20,
+      "log_count": 64,
+      "scenario": "left",
+      "start": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.402,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 1,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.862,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 2,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.825,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 3,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.943,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 4,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.819,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 5,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.022,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 6,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1676.957,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 7,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.93,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 8,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.047,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 9,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.277,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 10,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.999,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 11,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.303,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 12,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.989,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 13,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.683,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 14,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1704.543,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 15,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.079,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 16,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.231,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 17,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1677.87,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 18,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.927,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 19,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.782,
+      "end": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "error": null,
+      "iteration": 20,
+      "log_count": 64,
+      "scenario": "right",
+      "start": {
+        "x": 0.2,
+        "y": 0.5
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.396,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 1,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.793,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 2,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.187,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 3,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.859,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 4,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1683.856,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 5,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.621,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 6,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1686.842,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 7,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.859,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 8,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1684.193,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 9,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1683.908,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 10,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1689.633,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 11,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.612,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 12,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.838,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 13,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.645,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 14,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.345,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 15,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1677.175,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 16,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.397,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 17,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.114,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 18,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.11,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 19,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1684.605,
+      "end": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "error": null,
+      "iteration": 20,
+      "log_count": 64,
+      "scenario": "short",
+      "start": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.211,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 1,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.183,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 2,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.401,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 3,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.519,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 4,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1687.131,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 5,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1682.021,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 6,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.861,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 7,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1683.901,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 8,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.095,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 9,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.425,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 10,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1683.099,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 11,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.631,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 12,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.265,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 13,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.518,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 14,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1684.776,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 15,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1676.992,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 16,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1678.508,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 17,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1679.868,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 18,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1681.743,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 19,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    },
+    {
+      "elapsed_ms": 1680.439,
+      "end": {
+        "x": 0.5,
+        "y": 0.15
+      },
+      "error": null,
+      "iteration": 20,
+      "log_count": 64,
+      "scenario": "long",
+      "start": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "status": "succeeded"
+    }
+  ],
+  "safety": {
+    "allow_real_hardware": true,
+    "bounds": {
+      "x_max": 366,
+      "x_min": 0,
+      "y_max": 160,
+      "y_min": 0
+    },
+    "pen_up_z": 0,
+    "press_z": 7.0,
+    "references_modified": false,
+    "standard_device_api": "JxbArmAdapter",
+    "stop_on_first_failure": true
+  },
+  "service_url": "http://127.0.0.1:8082/MyWcfService/getstring",
+  "started_at": "2026-06-14T17:07:02.747961+00:00",
+  "status": "invalidated_no_physical_motion",
+  "invalidation": {
+    "reason": "This run used simulator-style MOVE_XY/MOVE_Z wire commands. The user observed that the real device did not move.",
+    "physical_motion": "failed_by_user_observation",
+    "superseded_by": "reports/phase-2-p2-08-hardware-swipe-validation-real-wire.md"
+  },
+  "summary": {
+    "failed": 0,
+    "per_scenario": {
+      "down": {
+        "attempted": 20,
+        "succeeded": 20
+      },
+      "left": {
+        "attempted": 20,
+        "succeeded": 20
+      },
+      "long": {
+        "attempted": 20,
+        "succeeded": 20
+      },
+      "right": {
+        "attempted": 20,
+        "succeeded": 20
+      },
+      "short": {
+        "attempted": 20,
+        "succeeded": 20
+      },
+      "up": {
+        "attempted": 20,
+        "succeeded": 20
+      }
+    },
+    "phone_recognition_status": "pending validation; no phone touch callback or manual observation log was captured",
+    "succeeded": 120,
+    "total_attempts": 120,
+    "transport_success_does_not_prove_phone_recognition": true
+  },
+  "swipe_config": {
+    "command_interval_ms": 50,
+    "duration_ms": 600,
+    "end_hold_ms": 80,
+    "point_count": 30,
+    "start_delay_ms": 80
+  },
+  "task": "P2-08 hardware swipe validation"
+}
