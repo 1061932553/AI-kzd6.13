@@ -1058,3 +1058,64 @@ Not included:
 - AI target detection.
 - Multiple-template logic.
 - Page flow judgment.
+### P2-12 automatic/manual mode gate and phase 2 acceptance
+
+Status: completed locally for offline integration.
+
+Branch: `phase2/p2-12-mode-gate-final`.
+
+Scope:
+
+- Add `AUTO`, `MANUAL`, `SWITCHING`, `OFFLINE`, and `FAULT` mode state handling.
+- Add a single in-process device ownership lock for automatic/manual control.
+- Add manual-control app configuration and an injected launch boundary.
+- Implement AUTO to MANUAL handoff ordering with script admission stop, current
+  action wait, script stop, pen-up, safe-home, disconnect, and lock transfer.
+- Implement MANUAL to AUTO restore ordering with manual app closed check,
+  reconnect, calibration load, home, center self-check, and automatic admission.
+- Add offline unit and integration tests plus phase 2 acceptance documentation.
+
+Deliverables:
+
+- `src/ai_arm_control/modes/device_lock.py`
+- `src/ai_arm_control/modes/mode_manager.py`
+- `src/ai_arm_control/modes/manual_app.py`
+- `src/modes/device_lock.py`
+- `src/modes/mode_manager.py`
+- `src/modes/manual_app.py`
+- `tests/unit/test_mode_manager.py`
+- `tests/integration/test_mode_switch.py`
+- `docs/phase2_acceptance.md`
+- `reports/phase2/acceptance_summary.md`
+- `config/hardware.example.yaml`
+
+Verification:
+
+- `python -m pytest tests\unit\test_mode_manager.py`
+- `python -m pytest tests\integration\test_mode_switch.py`
+- `python -m ruff check .`
+- `python -m pytest`
+
+Safety boundary:
+
+- No `references/` modifications.
+- No JxbService start/install.
+- No `127.0.0.1:8082` access.
+- No COM port access.
+- No USB camera access.
+- No EXE, DLL, BAT, installer, service, or administrator operation.
+- No real mechanical-arm action.
+
+Not completed:
+
+- Real-device phase 2 acceptance matrix remains pending explicit hardware
+  authorization and operator observation.
+- Manual-control executable name remains empty until confirmed.
+
+### Public interface change record addendum
+
+| Date | Task | Interface | Change | Reason | Impact |
+|---|---|---|---|---|---|
+| 2026-06-16 | P2-12 | `DeviceLock` | Added in-process owner lock with `AUTO` and `MANUAL` ownership validation. | Prevent automatic and manual control from owning the same device simultaneously. | Mode switching and action admission gates. |
+| 2026-06-16 | P2-12 | `ModeManager` | Added AUTO/MANUAL/SWITCHING/OFFLINE/FAULT transition manager. | Provide safe handoff sequence between script automation and manual control. | Script runner integration, device resource lifecycle, phase 2 acceptance. |
+| 2026-06-16 | P2-12 | `ManualAppController` | Added configuration-driven manual app boundary with no default process launch. | Keep legacy manual software launch explicit and testable. | Manual mode entry and hardware-only workflows. |

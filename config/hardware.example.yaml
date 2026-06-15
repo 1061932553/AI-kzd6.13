@@ -14,3 +14,8 @@ arm:
 camera:
   name: "USB Camera2-B"
   enabled: false
+
+manual_control:
+  enabled: true
+  app_directory: "C:\\Users\\s1061\\Desktop\\AI-Multi-Device-Control\\references\\main软件发客户-20260531\\main"
+  executable: ""
